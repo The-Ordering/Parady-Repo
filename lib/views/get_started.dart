@@ -8,10 +8,9 @@ class GetStarted extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration:const BoxDecoration(
-        gradient: LinearGradient(
-          colors: [Color.fromARGB(255, 229, 204, 164), Color.fromARGB(255, 193, 158, 235)],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
+        image: DecorationImage(
+          image: AssetImage("assets/images/GetStarted.png"),
+          fit: BoxFit.cover,
         ),
       ),
       child: Center(

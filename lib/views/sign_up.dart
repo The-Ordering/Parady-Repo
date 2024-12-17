@@ -10,29 +10,30 @@ class SignUp extends StatelessWidget {
       backgroundColor:const Color.fromRGBO(191, 200, 85, 1),
         body: Container(
           decoration:const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Color.fromARGB(255, 229, 204, 164), Color.fromARGB(255, 193, 158, 235)],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
+          image: DecorationImage(
+            image: AssetImage("assets/images/Sign_up.png"),
+            fit: BoxFit.cover,
           ),
         ),
         child:Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 4),
           child: Column(
             children: [
-              const Row(
+              Row(
                 children: [
-                  SizedBox(height: 120),
-                  Icon(
-                    Icons.bookmark,
-                    size: 16,
-                    color: Color.fromRGBO(0, 0, 0, 1),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 10)),
+                  const SizedBox(height: 120),
+                  Container(
+                    child: Image.asset("assets/images/HomeScreen.png"),
+                    width: 25,
+                    height: 25,
                   ),
                   SizedBox(width: 8),
-                  Text(
+                  const Text(
                     "TodoHive",
                     style: TextStyle(
-                      fontSize: 16,
+                      fontSize: 24,
                       fontWeight: FontWeight.bold,
                       color: Colors.black,
                       decoration: TextDecoration.none,
@@ -55,8 +56,8 @@ class SignUp extends StatelessWidget {
                     ClipOval(
                       child: Image.network(
                       "https://images.pexels.com/photos/29665824/pexels-photo-29665824/free-photo-of-cute-cartoon-face-hat-on-textured-stone-surface.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-                      width: 80,
-                      height: 80,
+                      width: 100,
+                      height: 100,
                       fit: BoxFit.cover,
                     ),
                       ),
@@ -198,7 +199,7 @@ class SignUp extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const SizedBox(height: 110),
+                    const SizedBox(height: 90),
                     const Text(
                       "Join our new beta program to test\nour new experimental feature",
                       style: TextStyle(

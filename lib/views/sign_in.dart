@@ -10,29 +10,31 @@ class SignIn extends StatelessWidget {
       backgroundColor:const Color.fromRGBO(191, 200, 85, 1),
         body: Container(
           decoration:const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Color.fromARGB(255, 229, 204, 164), Color.fromARGB(255, 193, 158, 235)],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
+          image: DecorationImage(
+            image: AssetImage("assets/images/Sign_in.png"),
+            fit: BoxFit.cover,
           ),
         ),
         child:Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10),
           child: Column(
             children: [
-              const Row(
+              Row(
                 children: [
-                  SizedBox(height: 130),
-                  Icon(
-                    Icons.bookmark,
-                    size: 16,
-                    color: Color.fromRGBO(0, 0, 0, 1),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 10),
                   ),
-                  SizedBox(width: 8),
-                  Text(
+                  const SizedBox(height: 130),
+                  SizedBox(
+                    width: 25,
+                    height: 25,
+                    child: Image.asset("assets/images/HomeScreen.png"),
+                  ),
+                  const SizedBox(width: 8),
+                  const Text(
                     "TodoHive",
                     style: TextStyle(
-                      fontSize: 16,
+                      fontSize: 24,
                       fontWeight: FontWeight.bold,
                       color: Colors.black,
                       decoration: TextDecoration.none,
