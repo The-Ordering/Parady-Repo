@@ -23,7 +23,7 @@ class SignUp extends StatelessWidget {
                 children: [
                   const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 10)),
-                  const SizedBox(height: 120),
+                  const SizedBox(height: 70),
                   Container(
                     child: Image.asset("assets/images/HomeScreen.png"),
                     width: 25,
@@ -199,7 +199,7 @@ class SignUp extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const SizedBox(height: 90),
+                    const SizedBox(height: 74),
                     const Text(
                       "Join our new beta program to test\nour new experimental feature",
                       style: TextStyle(

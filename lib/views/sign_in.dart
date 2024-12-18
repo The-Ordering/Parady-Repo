@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:todohive_project/views/home_screen.dart';
 import 'package:todohive_project/views/sign_up.dart';
 
-class SignIn extends StatelessWidget {
+class SignIn extends StatefulWidget {
   const SignIn({super.key});
 
+  @override
+  State<SignIn> createState() => _SignInState();
+}
+
+class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,7 +53,7 @@ class SignIn extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const SizedBox(height: 150),
+                    const SizedBox(height: 100),
                     const Text(
                       "Welcome Back!",
                       style: TextStyle(
@@ -84,9 +90,15 @@ class SignIn extends StatelessWidget {
                     ),
                     const SizedBox(height: 20),
                     ElevatedButton(
-                      onPressed: () {
-                        
-                      },
+                      onPressed:  () => 
+                      Navigator.push(
+                      context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                            const HomeScreen(
+                            ),
+                        ),
+                      ),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.black,
                         shape: RoundedRectangleBorder(
@@ -104,8 +116,8 @@ class SignIn extends StatelessWidget {
                     ),
                     const SizedBox(height: 15),
                     ElevatedButton(
-                      onPressed: () {
-                        
+                      onPressed: (){
+
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.white.withOpacity(0.4),
@@ -117,7 +129,10 @@ class SignIn extends StatelessWidget {
                       child:const Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Icon(Icons.gps_off_sharp),
+                          Icon(
+                            Icons.g_mobiledata_rounded,
+                            size: 40,
+                          ),
                           Text(
                             "  Sign in with Google",
                             style: TextStyle(
