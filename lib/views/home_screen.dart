@@ -56,12 +56,12 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   _buildCategoryCard(
                     "Project",
-                     "                          5", 
+                     "                         5", 
                      Colors.blue.shade100
                   ),
                   _buildCategoryCard(
                     "Work",
-                    "                              3", 
+                    "                            3", 
                     Colors.green.shade100
                   ),
                   _buildCategoryCard(
