@@ -6,9 +6,13 @@ class SignUp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor:const Color.fromRGBO(191, 200, 85, 1),
         body: Container(
+          width: screenWidth * 1,
+          height: screenHeight * 1,
           decoration:const BoxDecoration(
           image: DecorationImage(
             image: AssetImage("assets/images/Sign_up.png"),
@@ -24,13 +28,13 @@ class SignUp extends StatelessWidget {
                   children: [
                     const Padding(
                       padding: EdgeInsets.symmetric(horizontal: 10)),
-                    const SizedBox(height: 70),
-                    Container(
+                    const SizedBox(height: 120),
+                    SizedBox(
                       child: Image.asset("assets/images/HomeScreen.png"),
                       width: 25,
                       height: 25,
                     ),
-                    SizedBox(width: 8),
+                    const SizedBox(width: 8),
                     const Text(
                       "TodoHive",
                       style: TextStyle(
@@ -200,7 +204,7 @@ class SignUp extends StatelessWidget {
                           ),
                         ],
                       ),
-                      const SizedBox(height: 74),
+                      const SizedBox(height: 70),
                       const Text(
                         "Join our new beta program to test\nour new experimental feature",
                         style: TextStyle(

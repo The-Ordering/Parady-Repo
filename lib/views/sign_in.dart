@@ -12,9 +12,14 @@ class SignIn extends StatefulWidget {
 class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
+
     return Scaffold(
       backgroundColor:const Color.fromRGBO(191, 200, 85, 1),
         body: Container(
+          width: screenWidth * 1,
+          height: screenHeight * 1,
           decoration:const BoxDecoration(
           image: DecorationImage(
             image: AssetImage("assets/images/Sign_in.png"),

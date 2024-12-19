@@ -6,7 +6,13 @@ class GetStarted extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
+
     return Container(
+      width: screenWidth * 1,
+      height: screenHeight * 1,
       decoration:const BoxDecoration(
         image: DecorationImage(
           image: AssetImage("assets/images/GetStarted.png"),
